@@ -2,21 +2,18 @@
 
 Current in progress 
 
-The accounts to login are:
+### The accounts to login are:
 
-Username: hl
+Username: hl  
 pin: 1111
   
-Username: jd
-
+Username: jd  
 pin: 2222
 
-Username: stw
-
+Username: stw  
 pin: 3333
   
-Username: ss
-
+Username: ss  
 pin: 4444
   
-# https://hamzaconnection.github.io/bankist/.
+## https://hamzaconnection.github.io/bankist/
