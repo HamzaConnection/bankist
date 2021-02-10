@@ -5,7 +5,6 @@ Current in progress
 The accounts to login are:
 
 Username: hl
-
 pin: 1111
   
 Username: jd
