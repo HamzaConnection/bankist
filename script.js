@@ -276,7 +276,7 @@ btnLogin.addEventListener('click', e => {
   );
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    console.log('LOGIN');
+    //console.log('LOGIN');
 
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]
       }`;
@@ -334,35 +334,35 @@ btnClose.addEventListener('click', e => {
     accOwner === currentAccount?.username &&
     Number(accOwnerPin) === currentAccount?.pin
   ) {
-    console.log(
-      'account matched: ' +
-      accOwner +
-      ' : ' +
-      currentAccount?.username +
-      ' : ' +
-      accOwnerPin +
-      ' : ' +
-      currentAccount?.pin
-    );
+    // console.log(
+    //   'account matched: ' +
+    //   accOwner +
+    //   ' : ' +
+    //   currentAccount?.username +
+    //   ' : ' +
+    //   accOwnerPin +
+    //   ' : ' +
+    //   currentAccount?.pin
+    // );
 
-    console.log(
-      'account matched: ' +
-      accOwner +
-      ' : ' +
-      currentAccount?.username +
-      ' : ' +
-      accOwnerPin +
-      ' : ' +
-      currentAccount?.pin
-    );
+    // console.log(
+    //   'account matched: ' +
+    //   accOwner +
+    //   ' : ' +
+    //   currentAccount?.username +
+    //   ' : ' +
+    //   accOwnerPin +
+    //   ' : ' +
+    //   currentAccount?.pin
+    // );
 
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
-    console.log(accounts);
+    //console.log(accounts);
 
     accounts.splice(index, 1);
-    console.log(accounts);
+    //console.log(accounts);
 
     inputCloseUsername.value = '';
     inputClosePin.value = '';
