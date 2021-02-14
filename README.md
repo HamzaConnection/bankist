@@ -14,6 +14,6 @@ pin: 3333
 Username: ss  
 pin: 4444
 
-Login and do transfers by to various accounts by using the usernames above.
+Login and do transfers to the various accounts by using the usernames above.
 
 ## https://hamzaconnection.github.io/bankist/
