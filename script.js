@@ -235,20 +235,18 @@ const startLogOutTimer = () => {
     const sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
 
-
     if (time === 0) {
       clearInterval(timer);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
     }
-    time--
-  }
-
+    time--;
+  };
 
   tick();
   const timer = setInterval(tick, 1000);
   return timer;
-}
+};
 // event handler
 let currentAccount, timer;
 
@@ -298,7 +296,7 @@ btnLogin.addEventListener('click', e => {
 
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
-  console.log('transfer started');
+  //console.log('transfer started');
   const amount = Number(inputTransferAmount.value);
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
@@ -318,7 +316,7 @@ btnTransfer.addEventListener('click', e => {
     receiverAcc.movementsDates.push(new Date().toISOString());
 
     updateUI(currentAccount);
-    console.log('Transfer valid');
+    //console.log('Transfer valid');
     clearInterval(timer);
     startLogOutTimer();
   }
@@ -334,17 +332,6 @@ btnClose.addEventListener('click', e => {
     accOwner === currentAccount?.username &&
     Number(accOwnerPin) === currentAccount?.pin
   ) {
-    // console.log(
-    //   'account matched: ' +
-    //   accOwner +
-    //   ' : ' +
-    //   currentAccount?.username +
-    //   ' : ' +
-    //   accOwnerPin +
-    //   ' : ' +
-    //   currentAccount?.pin
-    // );
-
     // console.log(
     //   'account matched: ' +
     //   accOwner +
