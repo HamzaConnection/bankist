@@ -225,9 +225,12 @@ const updateUI = currentAccount => {
   displayMovements(currentAccount);
   calcDisplayBalance(currentAccount);
   calcDisplaySummary(currentAccount);
+  clearInterval(timer)
+  startLogOutTimer()
 };
 
-const startLogOutTimer = () => {
+
+let startLogOutTimer = () => {
   let time = 100;
 
   const tick = () => {
@@ -244,8 +247,8 @@ const startLogOutTimer = () => {
   };
 
   tick();
-  const timer = setInterval(tick, 1000);
-  return timer;
+  timer = setInterval(tick, 1000);
+
 };
 // event handler
 let currentAccount, timer;
@@ -287,9 +290,10 @@ btnLogin.addEventListener('click', e => {
       options
     ).format(now);
 
-    if (timer) clearInterval(timer);
 
-    timer = startLogOutTimer();
+
+
+
     updateUI(currentAccount);
   }
 });
@@ -316,9 +320,8 @@ btnTransfer.addEventListener('click', e => {
     receiverAcc.movementsDates.push(new Date().toISOString());
 
     updateUI(currentAccount);
-    //console.log('Transfer valid');
-    clearInterval(timer);
-    startLogOutTimer();
+
+
   }
 });
 
@@ -368,8 +371,8 @@ btnLoan.addEventListener('click', e => {
     updateUI(currentAccount);
   }
 
-  clearInterval(timer);
-  startLogOutTimer();
+
+
   inputLoanAmount.value = '';
 });
 
@@ -380,8 +383,7 @@ btnSort.addEventListener('click', e => {
   displayMovements(currentAccount, !sorted);
 
   sorted = !sorted;
-  clearInterval(timer);
-  startLogOutTimer();
+
 });
 
 /////////////////////////////////////////////////
